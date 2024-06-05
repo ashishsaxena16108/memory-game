@@ -1,0 +1,31 @@
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 10px;
+    cursor: pointer;
+    font-size: xx-large;
+    border-radius: 10px;
+    perspective: 1000px;
+  }
+  img{
+    height: 80px;
+    width: 80px;
+    margin: 0;
+  }
+  .cell-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+  .cell-front, .cell-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cell-back {
+    transform: rotateY(180deg);
+  }
